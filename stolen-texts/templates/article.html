@@ -15,6 +15,10 @@
       <div class="span8">
 	{{ article.content }}
 	<hr />
+        {% if PLUSONE_SITEURL and SITEURL and article.status != "draft" %}
+          <h4>Comments</h4>
+          {% include 'gplus.html' %}
+        {% endif %}
       </div>
     </div>
     </div>
