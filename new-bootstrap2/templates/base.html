@@ -69,7 +69,7 @@
                   <li><a href="{{ link }}">{{ title }}</a></li>
               {% endfor %}
               {% if DISPLAY_PAGES_ON_MENU %}
-              {% for gpage in PAGES %}
+              {% for gpage in pages %}
                 <li {% if page == gpage %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ gpage.url }}">{{ gpage.title }}</a></li>
               {% endfor %}
                 <li class="divider-vertical"></li>
@@ -82,7 +82,7 @@
                 </li>
               {% endfor %}
               <ul class="nav pull-right">
-                    <li><a href="{{ SITEURL }}/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                    <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL }}"><i class="icon-th-list"></i>Archives</a></li>
               </ul>
 
             </ul>

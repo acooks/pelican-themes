@@ -70,11 +70,12 @@
                   <li><a href="{{ link }}">{{ title }}</a></li>
               {% endfor %}
               {% if DISPLAY_PAGES_ON_MENU %}
-              {% for page in PAGES %}
+              {% for page in pages %}
                 <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
               {% endfor %}
                           <li class="divider-vertical"></li>
               {% endif %}
+              {% if DISPLAY_CATEGORIES_ON_MENU %}
               {% for cat, null in categories %}
                   <li {% if cat == category %}class="active"{% endif %}>
                     <a href="{{ SITEURL }}/{{ cat.url }}">
@@ -82,6 +83,7 @@
 					</a>
                   </li>
               {% endfor %}
+              {% endif %}
 
                           <ul class="nav pull-right">
                                 <li><a href="{{ SITEURL }}/archives.html"><i class="icon-th-list"></i>Archives</a></li>

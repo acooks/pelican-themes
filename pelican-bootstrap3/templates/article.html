@@ -74,7 +74,7 @@
                 <h1>
                     <a href="{{ SITEURL }}/{{ article.url }}"
                        rel="bookmark"
-                       title="Permalink to {{ article.title|striptags }}">
+                       title="{{ _('Permalink to') }} {{ article.title|striptags }}">
                         {{ article.title }}
                     </a>
                 </h1>
@@ -89,9 +89,11 @@
             </div>
             <!-- /.entry-content -->
             {% include 'includes/related-posts.html' %}
+            {% include 'includes/series.html' %}
             {% include 'includes/addthis.html' %}
             {% include 'includes/shariff.html' %}
             {% include 'includes/comments.html' %}
+            {% include 'includes/show_source.html' %}
         </article>
     </section>
 
@@ -106,6 +108,6 @@
 {% endif %}
 {% if SHARIFF|default(false) %}
     <!-- add shariff support -->
-    <script src="{{ SITEURL }}/theme/js/shariff.min.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/shariff.min.js"></script>
 {% endif %}
 {% endblock %}

@@ -11,7 +11,7 @@
           {% endfor %}
         {% endif %}
         {% if DISPLAY_PAGES_ON_MENU %}
-          {% for p in PAGES %}
+          {% for p in pages %}
           <li><a href="{{ SITEURL}}/{{ p.url|e }}"{% if p == page %} class="active"{% endif %}>{{ p.title }}</a></li>
           {% endfor %}
         {% endif %}
@@ -36,7 +36,7 @@
         {% for url, name in SOCIAL %}
           <li><a href="{{ url|e }}">{{ name }}</a></li>
         {% endfor %}
-          <li><a href="{{ SITEURL }}/{{ FEED }}" rel="alternate">Flux Atom</a></li>
+          <li><a href="{{ SITEURL }}/{{ FEED_ATOM }}" rel="alternate">Flux Atom</a></li>
         {% if FEED_RSS %}
           <li><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">Flux RSS</a></li>
         {% endif %}

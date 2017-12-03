@@ -39,7 +39,7 @@ function greyon(img)
                     <li><a href="{{ link }}">{{ title }}</a></li>
                 {% endfor %}
                 {% if DISPLAY_PAGES_ON_MENU -%}
-                {% for pg in PAGES %}
+                {% for pg in pages %}
                     <li{% if pg == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
                 {% endfor %}
                 {% endif %}
@@ -74,7 +74,7 @@ function greyon(img)
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
-		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+		<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
         </footer><!-- /#contentinfo -->
 
 {% include 'analytics.html' %}
